@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>User Details</title>
+  <title>User Detail</title>
 </head>
 <body>
 <h1>User Details</h1>
-<p><strong>Username:</strong> <span th:text="${username}"></span></p>
-<p><strong>Email:</strong> <span th:text="${email}"></span></p>
-<p><strong>Age:</strong> <span th:text="${age}"></span></p>
-<p><strong>Address:</strong> <span th:text="${address}"></span></p>
+<p><strong>Username:</strong> <span th:text="${user.username}"></span></p>
+<p><strong>Email:</strong> <span th:text="${user.email}"></span></p>
+<p><strong>Age:</strong> <span th:text="${user.age}"></span></p>
+<p><strong>Address:</strong> <span th:text="${user.address}"></span></p>
+
+<a th:href="@{/editUser}">
+  <button>Edit</button>
+</a>
 </body>
 </html>
